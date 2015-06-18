@@ -40,7 +40,7 @@ Puppet::Type.newtype(:mongodb_user) do
     defaultto do
       fail("Parameter 'database' must be set")
     end
-    newvalues(/^\w+$/)
+    newvalues(/^\w+\-*\w+$/)
   end
 
   newparam(:tries) do
